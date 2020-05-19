@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import sys
 from datetime import datetime as dt
@@ -14,7 +15,7 @@ PASSWORD = os.environ["GCFPROXY_PASSWORD"]
 def run():
     start = dt.now()
     resp = requests.post(
-        "https://asia-east2-nhansproxy.cloudfunctions.net/nhansproxy",
+        "https://asia-northeast1-nhansproxy.cloudfunctions.net/nhansproxy",
         json={
             "url": "https://httpbin.org/ip",
             "method": "get",
